@@ -1,3 +1,170 @@
+/* Variable Declaration */
+
+:root {
+	--cream-bg: hsl(32, 50%, 96.9%);
+	--green-bg: hsl(160, 60%, 90.2%);
+	--twitter-blue: hsl(197, 100%, 46.7%);
+	--orange-border: hsl(38, 100%, 56.9%);
+	--link-blue: rgb(31, 120, 152);
+
+	--sm-space: 1rem;
+	--md-space: 2rem;
+	--lg-space: 3rem;
+}
+
+/*Font Declaration */
+
+@font-face {
+	font-family: "Inter-Regular";
+	src: url("fonts/Inter-Regular");
+	font-weight: 400;
+}
+
+/* Utility Classes */
+
+.cream-bg {
+	background-color: var(--cream-bg);
+}
+
+.green-bg {
+	background-color: var(--green-bg);
+}
+
+.twitter-blue {
+	background-color: var(--twitter-blue);
+}
+
+.orange-border {
+	border: 1px solid var(--orange-border);
+}
+
+/* CSS Reset */
+
 * {
     box-sizing: border-box;
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body.debug * {
+    outline: 1px solid red
+}
+
+.container {
+	position: relative;
+}
+
+body {
+	font-family: "Inter-Regular", sans-serif;
+}
+
+h1 {
+	font-weight: 600;
+	font-style: italic;
+	color: var(--twitter-blue);
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 40px
+}
+
+h4 {
+	font-weight: 800;
+}
+
+.grid-layout {
+	display: grid;
+	gap: 1rem;
+}
+
+.grid-layout > * {
+	border-radius: 10px;
+	border: 1px solid grey;
+}
+
+@media (min-width: 700px) {
+	.grid-layout {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.flex-display {
+		flex-direction: column;
+	}
+}
+
+.grid-layout > div * {
+	margin: 1rem;
+}
+
+.flex-display {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.testimonials .wrapper .flex-display > div {
+	background-color: white;
+	border-radius: 10px;
+}
+
+.price-plan .wrapper {
+	position: relative;
+	max-width: 550px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: center;
+}
+
+.price-plan .wrapper > div {
+	border-radius: 10px;
+}
+
+.price-plan .wrapper > div {
+
+}
+
+button {
+	display: flex;
+	align-items: center;
+	background-color: var(--button-blue);
+	color: white;
+	border-radius: 5px;
+}
+
+button img {
+	height: 30px;
+}
+
+button.hamburger {
+	float: right;
+}
+
+img, svg {
+	width: 50px;
+}
+
+header > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.wrapper {
+	padding: 2rem;
+}
+
+a {
+	text-decoration: none;
+	color: var(--link-blue)
+}
+
+p {
+	color: grey;
 }
